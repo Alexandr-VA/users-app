@@ -1,4 +1,4 @@
-/* ===================== Базовая типографика ===================== */
+
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
   color: #222;
 }
 
-/* ===================== Каркас страницы ===================== */
+
 
 .app {
   display: grid;
@@ -34,7 +34,7 @@ body {
   font-size: 18px;
 }
 
-/* ===================== Список пользователей ===================== */
+
 
 .user-list {
   list-style: none;
@@ -60,7 +60,7 @@ body {
   font-weight: 600;
 }
 
-/* ===================== Карточка деталей ===================== */
+
 
 .details-card {
   display: flex;
@@ -85,7 +85,7 @@ body {
   border-bottom: 1px dashed #e0e0e0;
 }
 
-/* ===================== Аватар: общие размеры и форма ===================== */
+
 
 .avatar,
 .avatar-wrapper {
@@ -94,30 +94,37 @@ body {
 }
 
 .avatar-wrapper {
-  position: relative;
+  position: relative;      
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .avatar {
   border-radius: 50%;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;          
+}
+
+
+
+.avatar-overlay {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 12px;
-  line-height: 1.2;
-  overflow: hidden;
-}
-
-.avatar-img {
-  object-fit: cover;
+  padding: 6px;
   border-radius: 50%;
-}
-
-/* ===================== Аватар: индикатор загрузки ===================== */
-
-.avatar-loading {
   background: #eef2ff;
   border: 1px dashed #b9c4ff;
+  font-size: 11px;
+  line-height: 1.2;
 }
 
 .spinner {
@@ -135,18 +142,16 @@ body {
   }
 }
 
-/* ===================== Аватар: сообщение об ошибке ===================== */
 
-.avatar-error {
+
+.avatar-overlay-error {
   background: #ffe6ea;
   color: #b00020;
   border: 1px solid #f3b3bf;
-  padding: 6px;
-  font-size: 11px;
   font-weight: 500;
 }
 
-/* ===================== Статусы и заглушки ===================== */
+
 
 .placeholder {
   color: #888;
